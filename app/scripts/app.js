@@ -2,30 +2,39 @@ console.log('hello')
 
 /// App Config ///
 
-var Chat = angular.module('Chat', ['firebase', 'ui.router']);
-
-Chat.config(['$stateProvider', '$locationProvider', function($stateProvider, $locationProvider) {
-  $locationProvider.html5Mode({
-    enabled: true,
-    requireBase: false
-  });
-
-  $stateProvider.state('home', {
-     url: '/',
-     controller: 'home.controller',
-     templateUrl: '/templates/home.html'
-  });
-
-
-}]);
-
-
-
+var Chat = angular.module('chatApp', ['firebase'])
 
 
 
 /// Call the controller ///
 
-Chat.controller('about.controller', ['$scope', function($scope) {
+.controller('chatCtrl', function($scope, $firebaseObject) {
 
- }]);
+var ref = new Firebase("https://gabe-bloc-chat.firebaseio.com/");  
+
+  // sync as object 
+  var syncObject = $firebaseObject(ref.child('rooms'));
+
+  // three way data binding
+  syncObject.$bindTo($scope, 'rooms');
+
+  // function to set the default data
+  $scope.reset = function() {    
+
+  var daysRef = ref.child('rooms');
+
+    daysRef.set({
+      '1': {
+        name: 'Room 1',
+        booked: false
+      },
+          '2': {
+        name: 'Room 2',
+        booked: false
+      }
+
+    });
+
+  };
+
+ });

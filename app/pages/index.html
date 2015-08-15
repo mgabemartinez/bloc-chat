@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="Chat" lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>BlocChat</title>
@@ -39,22 +39,25 @@
 </head>
 
 
-<body>
+<body ng-app="chatApp" ng-controller="chatCtrl">
 
   <!-- Nav Bar -->
   <nav class='main-nav'>
-    <ul class="nav navbar-nav navbar-right">
-     <!-- <li><a ui-sref='about'>About</a></li> -->
-      <li><a ui-sref='work-timer'>Begin</a></li>
-    </ul>
+  
     <ul class="nav navbar-nav navbar-left">
       <li class='logo'><a class='home'>BlocChat</a></li>
   </nav>
 
- 
 
+<div>
   
+  <a href="#" class="button-large" ng-click="reset()">RESET</a>
+  <h1> {{ rooms }}
   
+
+
+</div>
+
 
 </body>
 </html>
