@@ -10,7 +10,7 @@ var Chat = angular.module('chatApp', ['firebase'])
 
 .controller('chatCtrl', function($scope, $firebaseObject) {
 
-var ref = new Firebase("https://gabe-bloc-chat.firebaseio.com/");  
+  var ref = new Firebase("https://gabe-bloc-chat.firebaseio.com/");  
 
   // sync as object 
   var syncObject = $firebaseObject(ref.child('rooms'));
@@ -19,22 +19,26 @@ var ref = new Firebase("https://gabe-bloc-chat.firebaseio.com/");
   syncObject.$bindTo($scope, 'rooms');
 
   // function to set the default data
-  $scope.reset = function() {    
+  $scope.set = function() {    
 
   var daysRef = ref.child('rooms');
 
     daysRef.set({
       '1': {
         name: 'Room 1',
-        booked: false
       },
-          '2': {
+      '2': {
         name: 'Room 2',
-        booked: false
+      },
+      '3': {
+        name: 'Room 3',
+      },
+      '4': {
+        name: 'Room 4',
       }
 
     });
 
   };
 
- });
+});

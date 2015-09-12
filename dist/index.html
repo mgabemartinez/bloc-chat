@@ -49,12 +49,17 @@
   </nav>
 
 
-<div>
-  
-  <a href="#" class="button-large" ng-click="reset()">RESET</a>
-  <h1> {{ rooms }}
-  
+<div class='room-section'>
 
+  <div ng-repeat='room in rooms'>
+    <h1> {{ room.name }}</h1>
+    <!-- call view here -->
+    <!-- if click -->
+      <div ui-view></div>
+  </div>
+  
+  
+  <a href="#" class="button-large" ng-click="set()">SET</a>
 
 </div>
 

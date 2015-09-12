@@ -1,9 +1,9 @@
 h1 {
-  color: pink; }
+  color: #97BAB5; }
 
 .main-nav {
   top: 0;
-  background-color: #778B91;
+  background-color: #97BAB5;
   height: 74px;
   margin: 0;
   padding: 0;
@@ -18,20 +18,73 @@ h1 {
     .main-nav li a {
       text-decoration: none;
       font-family: sans-serif;
-      font-weight: 500;
-      text-transform: uppercase;
+      font-weight: 700;
       text-align: center;
-      font-size: 1.2em;
-      letter-spacing: 2px;
+      font-size: 3em;
+      letter-spacing: -2px;
       color: white;
       padding: 27px; }
       .main-nav li a:hover {
         text-decoration: none;
         color: white;
-        background-color: black; }
+        background-color: #2E2E2E; }
       .main-nav li a:active {
         text-decoration: none; }
       .main-nav li a:visited {
         text-decoration: none;
         background-color: white; }
+    .main-nav li .home h1 {
+      font-size: 50px;
+      color: white; }
 
+.room-section {
+  background-color: #DBDBDB;
+  height: 100vh;
+  width: 25%;
+  min-width: 250px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.button-large {
+  text-decoration: none;
+  width: 200px;
+  height: 75px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #2E2E2E;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  border: 3px solid #97BAB5;
+  margin-top: 50px;
+  margin-bottom: 40px; }
+  .button-large:hover {
+    text-decoration: none;
+    color: #DBDBDB;
+    background-color: #97BAB5; }
+  .button-large:visited {
+    text-decoration: none;
+    color: white; }
+  .button-large:active {
+    text-decoration: none; }
+  .button-large:link {
+    text-decoration: none;
+    color: #2E2E2E; }
